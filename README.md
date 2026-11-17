@@ -4,6 +4,8 @@
 
 [![Tree packing explorer](tree-packing-demo.gif)](https://alexyaroshe.com/tree-packing/#n=10&sequence=17427449&base=1)
 
+---
+
 ## Run locally
 
 Requires Linux or macOS, Python 3.9+, C17/C++17 compilers, make and zstd. See [requirements](format.md#requirements).
@@ -42,6 +44,8 @@ python3 verify.py --package /path/to/n11_placement_only \
 Success: `build/verify-n11/finished.json` has top-level `status` set to `verified`, with both checker verdicts under `stream.verdicts`.
 
 For either workflow, the output directory must not already exist.
+
+---
 
 ## Files
 
