@@ -14,6 +14,25 @@
 
 Requires Linux or macOS, Python 3.9+, C17/C++17 compilers, make and zstd. See [requirements](format.md#requirements).
 
+Ubuntu/Debian:
+
+```sh
+sudo apt update
+sudo apt install make zstd
+```
+
+macOS: install Apple's command-line tools if needed; they include make:
+
+```sh
+xcode-select --install
+```
+
+Finish the installer. Install [Homebrew](https://brew.sh) if needed, then run:
+
+```sh
+brew install zstd
+```
+
 Run these commands from the repository folder, in a path without spaces.
 
 ### Build
