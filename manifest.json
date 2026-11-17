@@ -1,0 +1,128 @@
+{
+  "name": "tree-packing-through-n13",
+  "status": "unpublished",
+  "build": {
+    "dependency": {
+      "archive": "dependencies/nauty2_9_3.tar.gz",
+      "source_directory": "nauty2_9_3"
+    }
+  },
+  "files": {
+    ".gitignore": {
+      "bytes": 27,
+      "sha256": "84fc43d5a4c0a60c5752c9719c8049d310699d222749abc31579aabe35d8aa14"
+    },
+    "CITATION.cff": {
+      "bytes": 417,
+      "sha256": "c5898df8835f5c63261b40c3c27bc94b2a86333ca610b3055e5a09592cfeb97f"
+    },
+    "LICENSE": {
+      "bytes": 1069,
+      "sha256": "edd2c288922ec4404fb31aee59b9367776bf1119f9838cb8fa4203fbc8bb1d66"
+    },
+    "README.md": {
+      "bytes": 3898,
+      "sha256": "876077c00794faa1aab23202ef6978673e97042f95edaa1e03c102a131cdacfb"
+    },
+    "build.py": {
+      "bytes": 9054,
+      "sha256": "900c4780ac92e66ffed0a570ab8d4d295985f77fa57795498ea754b811699c6d"
+    },
+    "certificates.json": {
+      "bytes": 5080,
+      "sha256": "03a667791878704ab689fd504e496580534349dac0b4062dcd3444b25f160538"
+    },
+    "checkers/check_proof.cpp": {
+      "bytes": 11442,
+      "sha256": "47c83e6cde33d1bfa475b20128a795899d59be49a766d1834e04dea5049c690e"
+    },
+    "checkers/check_proof_independent.c": {
+      "bytes": 23872,
+      "sha256": "0a42fa92b022a2348b80242b04421ff6c77e97a3ee2f7be19b08ec771d839f96"
+    },
+    "dependencies/COPYRIGHT": {
+      "bytes": 2234,
+      "sha256": "e7e1cb03b4962e46e38084f24ef134dd7582a7f9e19e9cd81145ed6c71bea51c"
+    },
+    "dependencies/LICENSE-2.0.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "dependencies/nauty2_9_3.tar.gz": {
+      "bytes": 5496724,
+      "sha256": "9fc4edae04f88a0f5883985be3b39cf7f898fd6cc96e96b9ee25452743cc1b5b"
+    },
+    "format.md": {
+      "bytes": 3705,
+      "sha256": "6ba927eb3cb2a53b0e29823d965197042eac4d4060e3658e46931f0a2803bba1"
+    },
+    "reconstruction/build_placements.py": {
+      "bytes": 5203,
+      "sha256": "7e746fa56d29685d795bf73a80e79e951fb7f3a31c95408018815dc37388c633"
+    },
+    "reconstruction/build_states.py": {
+      "bytes": 5221,
+      "sha256": "b036e5d52c912d3a33868ff31c690fa9e18fbc7222a4a7b6654a4f706aa8caaf"
+    },
+    "reconstruction/graph_helpers.cpp": {
+      "bytes": 37527,
+      "sha256": "c54b186580186b3118cd54d6f59ea5f0cdc2d09a2b817603df3f5315cea683b3"
+    },
+    "reconstruction/placements.cpp": {
+      "bytes": 41462,
+      "sha256": "236a80a3374d26695ac304d367f182f1103075e35edec7dd99977e8cd367af71"
+    },
+    "reconstruction/state_parallel.cpp": {
+      "bytes": 29531,
+      "sha256": "beeb418ad94bab79fcfbd297c446090e417c542c53a54d2808f2bbff42d89274"
+    },
+    "reconstruction/state_serial.cpp": {
+      "bytes": 23384,
+      "sha256": "cba51d40c56440c2d989bd51f5751a3e0ac225a3405fba9525b3d662743e2ab6"
+    },
+    "reconstruction/verify_placements.py": {
+      "bytes": 17456,
+      "sha256": "78c1845970f70ff9156566d6cb064713a31287390743785172b64ada9dfa3123"
+    },
+    "reconstruction/verify_serial.py": {
+      "bytes": 21253,
+      "sha256": "62bb1181cfda4ddcc65935b679e9abb6fd43d66241f1297583752cb8ed745cd4"
+    },
+    "reconstruction/verify_states.py": {
+      "bytes": 25168,
+      "sha256": "ddf0ce4628de5cebebfe3514bef5c70452ede43f239fe57eebe144afbf80ff58"
+    },
+    "run.py": {
+      "bytes": 242,
+      "sha256": "27665a5d84379184291fa094e51964ea6215834b0f9eda1612a8c0a787e8d041"
+    },
+    "solver/build.py": {
+      "bytes": 5516,
+      "sha256": "514431935068612e83373ff89956ae8f6a1a8450a3824a936207a14d1383cfed"
+    },
+    "solver/run_campaign.py": {
+      "bytes": 46958,
+      "sha256": "99e6cfdd7794be6ea6cca11f36a94796630f9b87a16b4d163d2869b7d039851e"
+    },
+    "solver/solver.cpp": {
+      "bytes": 68323,
+      "sha256": "33c80d8b2c92e2381361901bd625e65a09e63ba7b4874c8bec73b0fd2841b2b1"
+    },
+    "tests/test_release.py": {
+      "bytes": 13966,
+      "sha256": "1a5e37beef57cbbf6a5a56febe83f72f9956e6367ca7c4389a8bf73ef6d3afb7"
+    },
+    "tree-packing-demo.gif": {
+      "bytes": 2673784,
+      "sha256": "8deacb7ca5198ebb7479cb89fdd1342881bc1b795e3ff015890982bbcf1c7429"
+    },
+    "trees.txt": {
+      "bytes": 58531,
+      "sha256": "f085c44b2da682cf8e08a66211bc61dc5f77ad6c8baff15e4b40b72bd7f2df05"
+    },
+    "verify.py": {
+      "bytes": 7423,
+      "sha256": "9a3b6a50cfbb821848619045f819219decd5577af0edee2a1c581864f26d6eb6"
+    }
+  }
+}

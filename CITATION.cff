@@ -1,10 +1,12 @@
 cff-version: 1.2.0
-message: "Please cite this software release and the accompanying paper."
+message: "Please cite this software and the accompanying paper."
 type: software
-title: "Tree packing conjecture: exhaustive n=12 verification software"
+title: "Tree packing conjecture: residual-graph verification through n=13"
+version: "2.0.0"
+doi: "10.5281/zenodo.24293386"
 authors:
   - family-names: Yaroshe
     given-names: Alex
     orcid: "https://orcid.org/0009-0005-7830-6741"
-version: "1.0.0"
+repository-code: "https://github.com/alexyaroshe/tree-packing-conjecture"
 license: MIT

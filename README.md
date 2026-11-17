@@ -1,67 +1,79 @@
-# Tree packing conjecture through n=12 code
+# Tree packing verification through n=13
 
-A sequence chooses one tree shape per size from 2 through n, ignoring vertex names. For n=2 through 12, the solver packs it into $K_n$ without reusing edges. Sequences start at 0 in catalog order, with smaller trees changing fastest.
+<h2 align="center"><a href="https://alexyaroshe.com/tree-packing/#n=10&sequence=17427449&base=1"><strong>Tree packing explorer</strong></a></h2>
 
-## Interactive explorer
+[![Tree packing explorer](tree-packing-demo.gif)](https://alexyaroshe.com/tree-packing/#n=10&sequence=17427449&base=1)
 
-[Tree packing explorer](https://alexyaroshe.com/tree-packing/) · [Ledger format explained](https://alexyaroshe.com/tree-packing-ledger-format/)
+## Run locally
 
-<a href="https://alexyaroshe.com/tree-packing/"><img src="tree-packing.png" alt="Interactive tree packing explorer" width="100%"></a>
+Requires Linux or macOS, Python 3.9+, C17/C++17 compilers, make and zstd. See [requirements](format.md#requirements).
 
-<a href="https://alexyaroshe.com/tree-packing/"><img src="tree-packing-2.png" alt="Tree packing explorer with a selected tree" width="100%"></a>
+Run these commands from the repository folder, in a path without spaces.
+
+### Build
+
+Build once before either workflow below. The `build` directory must not already exist.
+
+```bash
+python3 build.py --jobs 4
+```
+
+### Optional: run a small example
+
+Search n=5, archive the certificate and run both checkers. This example is not required to verify a downloaded certificate.
+
+```bash
+python3 run.py start --n 5 --build build/campaign/bin \
+  --trees trees.txt --output build/n5 --minimum-free-mib 1024 \
+  --memory-mib 1024 --solver-seconds 60 --verify-seconds 60 --total-seconds 300
+```
+
+Success: `build/n5/finished.json` has top-level `status` set to `verified`, with both checker verdicts under `verdicts`.
+
+### Verify a downloaded certificate
+
+Download and extract `n11_placement_only.zip`. Replace `/path/to/n11_placement_only` below with the extracted folder's path.
+
+```bash
+python3 verify.py --package /path/to/n11_placement_only \
+  --output build/verify-n11 --seconds 600
+```
+
+Success: `build/verify-n11/finished.json` has top-level `status` set to `verified`, with both checker verdicts under `stream.verdicts`.
+
+For either workflow, the output directory must not already exist.
 
 ## Files
 
-| File or folder | Contents |
+| File | Contents |
 |---|---|
-| [trees.txt](trees.txt) | All tree shapes (2–12 vertices) |
-| [solver/](solver/) | Solver |
-| [checkers/](checkers/) | Two C certificate checkers |
-| [certificates/](certificates/) | Retained certificate samples |
-| [tests/](tests/) | Checker tests & worked example |
-| [runner_and_tests/](runner_and_tests/) | Campaign, runner & tests |
-| [validation_and_tools/](validation_and_tools/) | Validation, build & tools |
-
-See the [three-vertex example](tests/examples/example.md)
-
-## Certificates
-
-Host vertices are numbered 0 through n−1. Edge IDs start at 0, ordered by the smaller endpoint, then the larger.
-
-At n=12, each certificate contains 66 binary bytes: 11 for $T_{12}$, 10 for $T_{11}$, down to one for $T_2$. Each byte is an edge ID. Certificates have no headers and follow batch sequence order.
-
-Temporary certificates go in the state's work/ directory. After both checkers accept a batch, its records and samples are saved in ledger.sqlite; working files are deleted. Compressed batch records store samples (as hexadecimal text in sample_hex). The plan keeps the first 1024 certificates from batches 0, 256, 512, …, plus the highest numbered batch.
-
-Retained n=12 samples are in [certificates/](certificates/). Recorded ledger (Zenodo): [10.5281/zenodo.23537606](https://doi.org/10.5281/zenodo.23537606).
-
-## Requirements
-
-Linux, Python, NetworkX, GCC. Campaigns also need Bash, gentreeg (nauty) and kissat.
-
-Run commands from the repository root with new output directories.
-
-## Tests
-
-Tests check compilation, catalogs, the example, both checkers and controller recovery using small runs.
-
-```sh
-python3 -B validation_and_tools/check_release.py --output ../portable-checks
-```
-
-## New run
-
-The certificates take quite a bit of space, so you need about 20 GB of storage. Use a persistent session with N workers, up to the available CPU count.
-
-```sh
-python3 validation_and_tools/build.py --output ../n12-build
-python3 validation_and_tools/gate_target.py --build ../n12-build --output ../n12-gate
-python3 runner_and_tests/campaign.py run --build ../n12-build --gate ../n12-gate \
-  --plan runner_and_tests/plan.json --state ../n12-state --workers N
-python3 runner_and_tests/campaign.py audit --state ../n12-state
-```
-
-Build and gate on the computing machine; repeat both after a reboot.
-
-A complete audit must report 1,400,833 batches and 5,875,518,611,160 cases.
-
-The campaign audit checks coverage and both checker verdicts for new runs.
+| [tree-packing-demo.gif](tree-packing-demo.gif) | Explorer demo |
+| [build.py](build.py) | Build |
+| [run.py](run.py) | Campaign |
+| [verify.py](verify.py) | Certificate verification |
+| [format.md](format.md) | Formats, scope & requirements |
+| [certificates.json](certificates.json) | Certificate identities & source paths |
+| [manifest.json](manifest.json) | Source & dependency hashes |
+| [SHA256SUMS](SHA256SUMS) | Checksums |
+| [CITATION.cff](CITATION.cff) | Citation |
+| [LICENSE](LICENSE) | License |
+| [.gitignore](.gitignore) | Build & cache exclusions |
+| [tests/test_release.py](tests/test_release.py) | Release tests |
+| [trees.txt](trees.txt) | Tree catalog |
+| [reconstruction/graph_helpers.cpp](reconstruction/graph_helpers.cpp) | Graph & placement helpers |
+| [checkers/check_proof.cpp](checkers/check_proof.cpp) | C++ checker |
+| [checkers/check_proof_independent.c](checkers/check_proof_independent.c) | Second checker (independent) |
+| [solver/solver.cpp](solver/solver.cpp) | Parallel solver |
+| [solver/build.py](solver/build.py) | Campaign build |
+| [solver/run_campaign.py](solver/run_campaign.py) | Checkpoints, restart & archive verification |
+| [reconstruction/state_serial.cpp](reconstruction/state_serial.cpp) | Serial state reconstruction |
+| [reconstruction/verify_serial.py](reconstruction/verify_serial.py) | Campaign archive verification |
+| [reconstruction/state_parallel.cpp](reconstruction/state_parallel.cpp) | Parallel state reconstruction |
+| [reconstruction/build_states.py](reconstruction/build_states.py) | State verification build |
+| [reconstruction/verify_states.py](reconstruction/verify_states.py) | State archive verification |
+| [reconstruction/placements.cpp](reconstruction/placements.cpp) | Placement reconstruction |
+| [reconstruction/build_placements.py](reconstruction/build_placements.py) | Placement verification build |
+| [reconstruction/verify_placements.py](reconstruction/verify_placements.py) | Placement archive verification |
+| [dependencies/nauty2_9_3.tar.gz](dependencies/nauty2_9_3.tar.gz) | nauty source |
+| [dependencies/COPYRIGHT](dependencies/COPYRIGHT) | nauty copyright |
+| [dependencies/LICENSE-2.0.txt](dependencies/LICENSE-2.0.txt) | nauty license |

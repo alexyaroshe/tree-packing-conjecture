@@ -1,0 +1,130 @@
+{
+  "packages": {
+    "n11_placement_only": {
+      "archive": "n11_placement_only.zip",
+      "bytes": 19475045,
+      "sha256": "05489fea66f472017101dee86c01d2da50dc047240cb7e48b9242bcc7a45241b",
+      "manifest_sha256": "dfddb19170076dd297797c99f96ed1231ff24feb93000e8da05c514fe0b0a9e4",
+      "n": 11,
+      "format": "TPCEPC01",
+      "certificate": {
+        "path": "packing.placements.zst",
+        "bytes": 13937036,
+        "sha256": "8bfb46522ead5210e268627dbaaaeba1a444fabe774ce3b62e61f27c4f0a9293"
+      },
+      "scope": {
+        "status": "verified",
+        "n": 11,
+        "top_first": 0,
+        "top_last": 235,
+        "roots": 235,
+        "nodes": 708057,
+        "placements": 11539061,
+        "proof_bytes": 293304590
+      },
+      "proof_sha256": "459e3938a847fac28d1922194285c2fef6de2737fafba15bf900f50e4f36976c",
+      "placement_search_required": false,
+      "previous_verification": {
+        "status": "verified",
+        "finished_at": "2026-11-12T05:44:16.349093+00:00",
+        "wall_seconds": 23.911087541957386,
+        "checker_exits": {
+          "checker": 0,
+          "independent_checker": 0
+        },
+        "checker_verdicts_match_scope": true,
+        "receipt_sha256": "cbe55a1b79f995f9f9aecc7e20e98d0d190f1553edf74d495647cc85f8c3cdee"
+      }
+    },
+    "n12_placement_only": {
+      "archive": "n12_placement_only.zip",
+      "bytes": 845945535,
+      "sha256": "eed57ca05d1792103126e304e20148754125471d19b7eadb84daef67144322c0",
+      "manifest_sha256": "24bda9779ff50be60f7b8f0199d6db9e9a6df4e405cb428c9adf9c077473ca43",
+      "n": 12,
+      "format": "TPCEPC01",
+      "certificate": {
+        "path": "packing.placements.zst",
+        "bytes": 840407522,
+        "sha256": "23431fcb8f71407f87dafd2a916eef82333682d85e372d148a87c38e7696d420"
+      },
+      "scope": {
+        "status": "verified",
+        "n": 12,
+        "top_first": 0,
+        "top_last": 551,
+        "roots": 551,
+        "nodes": 26933178,
+        "placements": 688686629,
+        "proof_bytes": 18433989702
+      },
+      "proof_sha256": "814fd2aeb26ddd15ffb870b278173019a8ceac1237a9275f2fd0adba92956c0c",
+      "placement_search_required": false,
+      "previous_verification": {
+        "status": "verified",
+        "finished_at": "2026-11-10T12:26:04.989785+00:00",
+        "wall_seconds": 1538.0637288339785,
+        "checker_exits": {
+          "checker": 0,
+          "independent_checker": 0
+        },
+        "checker_verdicts_match_scope": true,
+        "receipt_sha256": "c1e2d2bbae0cdd3c92db4f4dc21deefa3bee9c758b9005764b456efa1c5638a1"
+      }
+    },
+    "n13_state_only": {
+      "archive": "n13_state_only.zip",
+      "bytes": 5059741029,
+      "sha256": "941ebb2563ecef1e372901096d5a3357ddeb76330e6f17fb6418a1ca49428b1c",
+      "manifest_sha256": "7df9fe4639010f5d0f39fc8fe3c008e54453dd883b51b8716657be84698cc8c1",
+      "n": 13,
+      "format": "TPCGST01",
+      "certificate": {
+        "path": "packing.states.zst",
+        "bytes": 5054187162,
+        "sha256": "cc98530346b5ab337708a8fd9427fd9ff38087180994fc457b24986e82585af6"
+      },
+      "scope": {
+        "status": "verified",
+        "n": 13,
+        "top_first": 0,
+        "top_last": 1301,
+        "roots": 1301,
+        "nodes": 1679698327,
+        "placements": 68706879452,
+        "proof_bytes": 1939162657244
+      },
+      "proof_sha256": "7c9beea2c29d8661118244a8ea8e91d8b9900e8fffba9d41bcb2fe9a4a53e5b5",
+      "placement_search_required": true,
+      "previous_verification": {
+        "status": "verified",
+        "finished_at": "2026-11-12T05:33:03.519780+00:00",
+        "wall_seconds": 50896.97826300701,
+        "checker_exits": {
+          "checker": 0,
+          "independent_checker": 0
+        },
+        "checker_verdicts_match_scope": true,
+        "receipt_sha256": "2745cd7811ca189f96a40f6d61583b52f3f9f77da19ebcbe3f6e1769dfb0e9f2"
+      }
+    }
+  },
+  "publication_status": "prepared, not published",
+  "source_paths": {
+    "source/solver.cpp": "reconstruction/graph_helpers.cpp",
+    "source/check_proof.cpp": "checkers/check_proof.cpp",
+    "source/check_proof_independent.c": "checkers/check_proof_independent.c",
+    "source/trees.txt": "trees.txt",
+    "source/parallel-state/solver.cpp": "solver/solver.cpp",
+    "source/parallel-state/build.py": "solver/build.py",
+    "source/parallel-state/run_campaign.py": "solver/run_campaign.py",
+    "source/state-reconstruction/compact_states.cpp": "reconstruction/state_serial.cpp",
+    "source/direct-state/verify_archive.py": "reconstruction/verify_serial.py",
+    "source/parallel-reconstruction/compact_states.cpp": "reconstruction/state_parallel.cpp",
+    "source/parallel-reconstruction/build.py": "reconstruction/build_states.py",
+    "source/parallel-reconstruction/verify_archive.py": "reconstruction/verify_states.py",
+    "source/witness-compression/placement_codec.cpp": "reconstruction/placements.cpp",
+    "source/witness-compression/build.py": "reconstruction/build_placements.py",
+    "source/witness-compression/verify_archive.py": "reconstruction/verify_placements.py"
+  }
+}
