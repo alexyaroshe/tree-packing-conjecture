@@ -1,12 +1,12 @@
 # Tree packing verification through n=13
 
-[Certificates: n=11–13](https://doi.org/10.5281/zenodo.24293356) / [Software v2.0.0](https://doi.org/10.5281/zenodo.24293386)
-
-<img src="section-divider.svg" width="100%" height="8" alt="">
-
 <h2 align="center"><a href="https://alexyaroshe.com/tree-packing/#n=10&sequence=17427449&base=1"><strong>Tree packing explorer</strong></a></h2>
 
 [![Tree packing explorer](tree-packing-demo.gif)](https://alexyaroshe.com/tree-packing/#n=10&sequence=17427449&base=1)
+
+<img src="section-divider.svg" width="100%" height="8" alt="">
+
+[Zenodo archive with certificates](https://doi.org/10.5281/zenodo.24293356)
 
 <img src="section-divider.svg" width="100%" height="8" alt="">
 
