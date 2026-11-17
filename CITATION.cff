@@ -5,7 +5,7 @@ title: "Tree packing conjecture: residual-graph verification through n=13"
 version: "2.0.0"
 doi: "10.5281/zenodo.24293386"
 authors:
-  - family-names: Yaroshe
+  - family-names: Yaroshevych
     given-names: Alex
     orcid: "https://orcid.org/0009-0005-7830-6741"
 repository-code: "https://github.com/alexyaroshe/tree-packing-conjecture"
