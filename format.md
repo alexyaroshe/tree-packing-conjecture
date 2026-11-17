@@ -1,6 +1,6 @@
 # Residual-graph certificates
 
-This source release supports the certificate-checked results through n=13. The [software 2.0.0 DOI](https://doi.org/10.5281/zenodo.24293386) and [certificate 1.0.0 DOI](https://doi.org/10.5281/zenodo.24293356) are reserved for unpublished review drafts.
+This source release supports the certificate-checked results through n=13. Release identifiers: [software 2.0.0](https://doi.org/10.5281/zenodo.24293386) and [certificates 1.0.0](https://doi.org/10.5281/zenodo.24293356).
 
 The earlier n=12 software release, v1.0.0, and its [software DOI](https://doi.org/10.5281/zenodo.23557604) remain historical records; the [n=12 ledger DOI](https://doi.org/10.5281/zenodo.23537606) identifies the earlier sequence campaign. Neither historical DOI identifies these new certificates.
 

@@ -1,6 +1,6 @@
 {
   "name": "tree-packing-through-n13",
-  "status": "unpublished",
+  "version": "2.0.0",
   "build": {
     "dependency": {
       "archive": "dependencies/nauty2_9_3.tar.gz",
@@ -53,8 +53,8 @@
       "sha256": "9fc4edae04f88a0f5883985be3b39cf7f898fd6cc96e96b9ee25452743cc1b5b"
     },
     "format.md": {
-      "bytes": 3705,
-      "sha256": "6ba927eb3cb2a53b0e29823d965197042eac4d4060e3658e46931f0a2803bba1"
+      "bytes": 3672,
+      "sha256": "0de2872e12fcb6b54d0b3df64abfa967eb24c126b5d335309ac4a94f20d60950"
     },
     "reconstruction/build_placements.py": {
       "bytes": 5203,
