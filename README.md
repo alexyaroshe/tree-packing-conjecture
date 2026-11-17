@@ -4,7 +4,7 @@
 
 [![Tree packing explorer](tree-packing-demo.gif)](https://alexyaroshe.com/tree-packing/#n=10&sequence=17427449&base=1)
 
----
+<img src="section-divider.svg" width="100%" height="8" alt="">
 
 ## Run locally
 
@@ -45,13 +45,14 @@ Success: `build/verify-n11/finished.json` has top-level `status` set to `verifie
 
 For either workflow, the output directory must not already exist.
 
----
+<img src="section-divider.svg" width="100%" height="8" alt="">
 
 ## Files
 
 | File | Contents |
 |---|---|
 | [tree-packing-demo.gif](tree-packing-demo.gif) | Explorer demo |
+| [section-divider.svg](section-divider.svg) | Section divider |
 | [build.py](build.py) | Build |
 | [run.py](run.py) | Campaign |
 | [verify.py](verify.py) | Certificate verification |

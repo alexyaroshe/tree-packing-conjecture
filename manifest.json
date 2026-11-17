@@ -21,8 +21,8 @@
       "sha256": "edd2c288922ec4404fb31aee59b9367776bf1119f9838cb8fa4203fbc8bb1d66"
     },
     "README.md": {
-      "bytes": 3908,
-      "sha256": "e0073f65a9b0044437e503d3f27a260994609f24052cf3b2174f72881709e1cc"
+      "bytes": 4091,
+      "sha256": "c7a3af63ff3fc0460358d1e3121c5629381b397123aace30eed0d43f2c0653b5"
     },
     "build.py": {
       "bytes": 9054,
@@ -95,6 +95,10 @@
     "run.py": {
       "bytes": 242,
       "sha256": "27665a5d84379184291fa094e51964ea6215834b0f9eda1612a8c0a787e8d041"
+    },
+    "section-divider.svg": {
+      "bytes": 193,
+      "sha256": "d423fc20c46ac0bee11866356711c1676c4e7b45a29f1db32f109cdadf7d8842"
     },
     "solver/build.py": {
       "bytes": 5516,
