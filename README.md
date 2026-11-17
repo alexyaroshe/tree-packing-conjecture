@@ -1,5 +1,7 @@
 # Tree packing verification through n=13
 
+[Certificates: n=11–13](https://doi.org/10.5281/zenodo.24293356) / [Software v2.0.0](https://doi.org/10.5281/zenodo.24293386)
+
 <h2 align="center"><a href="https://alexyaroshe.com/tree-packing/#n=10&sequence=17427449&base=1"><strong>Tree packing explorer</strong></a></h2>
 
 [![Tree packing explorer](tree-packing-demo.gif)](https://alexyaroshe.com/tree-packing/#n=10&sequence=17427449&base=1)
@@ -34,7 +36,7 @@ Success: `build/n5/finished.json` has top-level `status` set to `verified`, with
 
 ### Verify a downloaded certificate
 
-Download and extract `n11_placement_only.zip`. Replace `/path/to/n11_placement_only` below with the extracted folder's path.
+Download and extract [n11_placement_only.zip](https://doi.org/10.5281/zenodo.24293356). Replace `/path/to/n11_placement_only` below with the extracted folder's path.
 
 ```bash
 python3 verify.py --package /path/to/n11_placement_only \
